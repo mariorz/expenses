@@ -249,3 +249,79 @@ NEW YORK|NYC|MANHATTAN|BROOKLYN|QUEENS
 ### Burning Man 2025
 - Apr 30: BURNINGMAN ticket 33,731.13 MXN (in 2025-05.csv)
 - **Did not attend** - tickets only, no trip to track
+
+---
+
+## Visualization Guidelines (Tufte Principles)
+
+When generating charts, reports, or visual summaries, follow Edward Tufte's principles for data visualization:
+
+### Core Principles
+
+1. **Maximize data-ink ratio** - Every drop of ink should convey information. Remove chartjunk, unnecessary gridlines, decorative elements, and redundant labels.
+
+2. **No pie charts for 3+ categories** - Pie charts are only acceptable for showing two values (binary comparisons). For three or more categories, use horizontal bar charts sorted by value.
+
+3. **Small multiples over complex charts** - When comparing across time or categories, use repeated small charts with consistent scales rather than cramming everything into one busy visualization.
+
+4. **Direct labeling** - Label data points directly rather than using legends that force the eye to travel back and forth.
+
+5. **High information density** - Pack information densely but clearly. Tables often convey more information than charts.
+
+### Chart Type Selection
+
+| Data Type | Recommended | Avoid |
+|-----------|-------------|-------|
+| Part-to-whole (2 values) | Simple bar or binary segment | - |
+| Part-to-whole (3+ values) | Horizontal bar chart, sorted | Pie chart, donut chart |
+| Trends over time | Line chart, sparkline | Area chart (obscures data) |
+| Comparisons | Horizontal bar chart | Vertical bars (harder to read labels) |
+| Distributions | Strip plot, histogram | Box plots (hide data) |
+| Correlations | Scatter plot | Bubble charts (area misleads) |
+
+### Specific Rules
+
+- **Horizontal bars > vertical bars** - Category labels are easier to read
+- **Sort bar charts by value** - Not alphabetically (unless order has meaning)
+- **Start axes at zero** for bars - Truncated axes mislead
+- **Use consistent scales** across small multiples
+- **Muted colors** - Avoid bright, saturated colors; use grayscale with one accent
+- **No 3D effects** - Ever
+- **No shadows or gradients** - Flat, clean fills only
+
+### The Expense Explorer
+
+The `explorer.html` file implements these principles:
+- Horizontal bar charts for category and merchant breakdowns
+- Binary segment chart only for two-value reimbursement status
+- Sparkline-style trend chart for monthly spending
+- High data-ink ratio with minimal decoration
+- Tabular data for detailed exploration
+- Monochrome palette with functional color only (red for watchlist alerts)
+
+---
+
+## Tools
+
+### Expense Explorer (`explorer.html`)
+
+A single-file HTML interface for exploring expense data. Open in any browser.
+
+**Features:**
+- Load multiple CSV files (Amex statements, Nubank, trips, work expenses)
+- Unified search across all transactions
+- Filter by date range, category, source, amount
+- View tabs: All Transactions, Work Expenses, Trips, Monthly
+- Visual summaries following Tufte principles
+- Watchlist highlighting (red rows for flagged vendors)
+- Export filtered data to CSV
+- Keyboard shortcuts: Ctrl/Cmd+F to focus search
+
+**Loading Data:**
+1. Open `explorer.html` in a browser
+2. Click "Choose Files" and select CSV files
+3. Multi-select with Ctrl/Cmd+click to load several at once
+
+**Supported CSV Formats:**
+- Amex raw statements (Fecha, Descripción, Importe columns)
+- Derived files (Date, Description, Category, Amount_MXN, Amount_USD, Source_File, Status)
