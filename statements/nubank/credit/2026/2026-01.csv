@@ -1,0 +1,12 @@
+Date,Description,Category,Amount_MXN,Amount_USD,Source_File,Account_Type,Status
+2025-12-24,F Ahorro Mell Calle,Salud,2316.00,,nubank-credit-2026-01.csv,credit,
+2026-01-02,Of,Otros,208.07,11.59,nubank-credit-2026-01.csv,credit,
+2026-01-03,Of,Otros,250.58,13.92,nubank-credit-2026-01.csv,credit,
+2026-01-06,Cafeteria Arabica,Restaurante,83.60,,nubank-credit-2026-01.csv,credit,
+2026-01-10,Cafeteria Arabica,Restaurante,145.20,,nubank-credit-2026-01.csv,credit,
+2026-01-13,Cafeteria Arabica,Restaurante,83.60,,nubank-credit-2026-01.csv,credit,
+2026-01-14,Cafeteria Arabica,Restaurante,83.60,,nubank-credit-2026-01.csv,credit,
+2026-01-15,Of,Otros,103.37,5.79,nubank-credit-2026-01.csv,credit,
+2026-01-17,Cafeteria Arabica,Restaurante,73.70,,nubank-credit-2026-01.csv,credit,
+2026-01-20,Cafeteria Arabica,Restaurante,83.60,,nubank-credit-2026-01.csv,credit,
+2026-01-21,Cafeteria Arabica,Restaurante,83.60,,nubank-credit-2026-01.csv,credit,

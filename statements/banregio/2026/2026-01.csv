@@ -1,0 +1,9 @@
+Date,Description,Category,Amount_MXN,Amount_USD,Source_File,Account_Type,Status
+2026-01-05,Transfer to Karen,Transfer:Karen,800.00,,banregio-2026-01.pdf,debit,
+2026-01-05,Transfer to Luci,Transfer:Luci,5000.00,,banregio-2026-01.pdf,debit,
+2026-01-05,Transfer to Luci,Transfer:Luci,2400.00,,banregio-2026-01.pdf,debit,
+2026-01-09,Transfer to Luci,Transfer:Luci,2800.00,,banregio-2026-01.pdf,debit,
+2026-01-16,Transfer to Luci,Transfer:Luci,2800.00,,banregio-2026-01.pdf,debit,
+2026-01-19,Mortgage Payment,Housing:Mortgage,34842.03,,banregio-2026-01.pdf,debit,
+2026-01-23,Transfer to Luci,Transfer:Luci,2800.00,,banregio-2026-01.pdf,debit,
+2026-01-30,Transfer to Luci,Transfer:Luci,2800.00,,banregio-2026-01.pdf,debit,

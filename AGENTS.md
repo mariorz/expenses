@@ -1,5 +1,47 @@
 # Agent Learnings
 
+## Monthly Processing Rules (HARD RULE)
+
+Every month MUST be fully processed before moving to the next. No gaps allowed.
+
+### Three Statements Per Month
+
+Each month requires **3 statements** to be considered complete:
+
+| # | Statement | Source |
+|---|-----------|--------|
+| 1 | **Amex** | `statements/amex/{year}/YYYY-MM.csv` |
+| 2 | **Banregio** | `statements/banregio/{year}/YYYY-MM.csv` |
+| 3 | **Nubank Credit** | `statements/nubank/credit/{year}/YYYY-MM.csv` |
+
+Statements can arrive in the inbox in any order. Process each as it comes, but track the month's state:
+
+- **Partially processed**: 1 or 2 of 3 statements done. Remind user which are missing.
+- **Statements complete**: All 3 processed. Generate the monthly report (see below).
+- **Fully closed**: All work expenses marked REIMBURSED. Month is done.
+
+### After All 3 Statements Are Processed
+
+1. **Print a monthly report** including:
+   - Total spending (personal vs. work)
+   - Top charges
+   - Repeated merchants
+   - Subscriptions/recurring charges
+   - Spending by category groups
+   - Any active trip breakdown (with category totals)
+
+2. **List all non-reimbursed work expenses** for the month explicitly, and ask the user to submit them in Deel.
+
+3. **Wait for reimbursement confirmation.** Only after the user confirms all work expenses are marked REIMBURSED (or explicitly waived) can the month be marked as fully closed.
+
+4. **Only then** open the inbox for the next month's processing.
+
+### Processing Order
+
+Months must be processed sequentially. Do not start processing month N+1 until month N is fully closed (all 3 statements + reimbursements confirmed).
+
+---
+
 ## File Structure
 
 ```
@@ -195,9 +237,9 @@ If the user mentions a trip, or if charges match known trip patterns:
 - Note: Amex CSVs sometimes include USD in format like `"1,150.04 USD"` or as separate column
 
 ### Step 5: Add Roam Reminder for Next Month
-After processing a monthly statement, add a todo item to Roam Research for the first Saturday of the following month to remind the user to add the next Amex and Nubank statements.
+After processing month N's statement, add a todo item to Roam Research for the first Saturday of month N+2 to remind the user to add month N+1's statements (which won't be available until that month ends).
 
-Example: After processing January 2026 statements, add a Roam todo for the first Saturday in February: "Add Amex and Nubank statements for February 2026"
+Example: After processing January 2026 statements, add a Roam todo for the first Saturday in **March**: "Add Amex and Nubank statements for February 2026"
 
 ### Step 6: Regenerate Consolidated File
 After processing any new statements, regenerate the consolidated expenses file for that year (see "Generating Consolidated Expenses" section below).
@@ -705,3 +747,14 @@ A single-file HTML interface for exploring expense data. Open in any browser.
 **Supported CSV Formats:**
 - Amex raw statements (Fecha, Descripción, Importe columns)
 - Derived files (Date, Description, Category, Amount_MXN, Amount_USD, Source_File, Status)
+
+---
+
+## Roam Research Formatting Rules
+
+### Email Drafts
+When adding email drafts to Roam (e.g., for watchlist follow-ups), structure them as:
+- **To:** (level 2 block)
+- **Subject:** (level 2 block)
+- **Body:** (level 2 block)
+  - The entire email body as **one single block** of text (level 3), using `\n\n` for paragraph breaks within the block. Do NOT split paragraphs into separate child blocks.
