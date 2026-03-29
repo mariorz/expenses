@@ -313,7 +313,8 @@ Search for these patterns to identify work expenses:
 ANTHROPIC, OPENAI, CHATGPT, CLAUDE.AI, CLAUDE AI,
 AWS EMEA, AWS , AMAZON WEB SERVICES,
 GOOGLE CLOUD, PAYU-GOOGLE,
-ANKR, BANKLESS, GITHUB, DISCORD
+ANKR, BANKLESS, DISCORD,
+ENVIO
 ```
 
 ### Transactions to EXCLUDE from Totals
@@ -471,6 +472,7 @@ Same as Amex processing - add a todo to Roam Research for the first Saturday of 
 - **YouTube Premium** - Personal entertainment
 - **Google Nest** - Personal smart home
 - **Whitepaper.mx** - Personal
+- **GITHUB, INC.** - Personal (confirmed 2026-03-29)
 
 ### Known Merchants (unclear names)
 - **WP100** - Wolf gym (Pachuca 100, Condesa) - Fitness membership
@@ -488,8 +490,8 @@ Same as Amex processing - add a todo to Roam Research for the first Saturday of 
 ### Work Expenses (Education/Research)
 - **Bankless** - Web3/blockchain industry research
 
-### Work Expenses (Developer Tools)
-- **GITHUB, INC.** - Code repository/collaboration
+### Work Expenses (Cloud/Infrastructure continued)
+- **ENVIO** - Cloud/infrastructure service (London-based)
 
 ### Work Expenses (Communication)
 - **Discord Nitro** - Work communication (annual subscription)
@@ -553,6 +555,58 @@ NEW YORK|NYC|MANHATTAN|BROOKLYN|QUEENS
 | Argentina | Oct 26 - Nov 22, 2025 | `trips/2025/argentina_oct-nov.csv` | ~285,600 | ~16,050 | Complete (Amex + Nubank) |
 | Merida | Dec 14-21, 2025 | `trips/2025/merida_dec.csv` | ~27,645 | ~1,553 | Complete |
 | NYC | Dec 27, 2025 - Jan 1, 2026 | `trips/2025/nyc_dec27-jan1.csv` | ~125,119 | ~6,720 | Pre-trip + ATM; more in-trip expenses expected in 2026-01.csv |
+
+---
+
+## Deel Reimbursement Reconciliation (March 2026)
+
+### AI Services Reconciliation (2025 + 2026 Q1)
+
+**Completed 2026-03-29.** Full reconciliation of OpenAI/ChatGPT, Claude.AI, and Anthropic charges on Amex vs Deel reimbursements.
+
+**Amex total (AI services):** ~116,565 MXN (~$6,048 USD)
+- OpenAI/ChatGPT: 55,130 MXN (~$2,843 USD) — 16 charges (Jan '25 - Mar '26)
+- Claude.AI Subscription: 3,595 MXN (~$180 USD) — 9 charges (Jan - Sep '25)
+- Anthropic credits: 57,840 MXN (~$3,025 USD) — 18 charges (Feb - Dec '25)
+
+**Deel total (AI services):** ~$5,663 USD
+- Recurring "openai/chatgpt": $4,313 across 20 semimonthly cycles (Jun '25 - Mar '26)
+- One-off "openai may,june,july": $600
+- Anthropic (3 submissions): $750
+
+**Gap: ~$385 USD** — submitted to Deel on 2026-03-29 (adjustment ID: `3a8b29b2-d707-4778-aae2-5c6683d07198`)
+
+### Google Cloud Platform Reconciliation
+
+PAYU-GOOGLE CLOUD charges on Amex (Apr 2025 - Mar 2026): 25 charges totaling ~4,397 MXN (~$231 USD). Never previously submitted to Deel.
+
+**Adjustment:** $231 USD submitted 2026-03-29 (Deel ID: `bdc52a49-7129-4666-a7d5-3dec255c5e60`)
+
+### Deel Recurring Setup (Fixed 2026-03-29)
+
+Old recurring (REMOVED):
+- "google workspace" $85 USD/cycle semimonthly — covered off-Amex Google Workspace billing
+- "openai/chatgpt" 219.39 MXN/cycle semimonthly — was being paid as ~$219 USD due to currency bug
+
+New recurring (ADDED):
+- **"OpenAI subs"** $200 USD monthly — matches OPENAI *CHATGPT SUBSCR on Amex (~4th of each month)
+- **"Google Cloud"** $22 USD monthly — matches PAYU-GOOGLE CLOUD on Amex (~$11 × 2/month)
+
+Note: Google Workspace ($85) was removed because the subscription moved off the Amex after Mar 2025 and no longer needs expense reimbursement.
+
+### Resolved Issues
+
+1. **Recurring "openai/chatgpt" MXN/USD bug** — FIXED. Old 219.39 MXN recurring was being paid as ~$219 USD. Removed and replaced with correct $200 USD monthly.
+2. **Semimonthly frequency** — FIXED. New recurring items are monthly.
+3. **Anthropic charges mostly unsubmitted** — CLOSED. The $385 AI services adjustment covers the historical gap. Going forward, submit Anthropic charges individually.
+4. **Google Cloud never submitted** — CLOSED. $231 backlog adjustment submitted. New $22/month recurring covers future charges.
+5. **GitHub reclassified as personal** — not a work expense, removed from work expense patterns.
+
+### AWS Reconciliation (2025)
+
+- Jun '25 AWS ($5,877): Submitted to Deel as $5,853 ✓
+- Aug '25 AWS ($7,963): Submitted to Deel as $7,843 ✓
+- Aug '25 AWS: **Double submission** of $7,843 (same invoice) — settled by NOT submitting Nov '25 AWS ($7,685). Net difference: ~$158 in user's favor.
 
 ---
 
