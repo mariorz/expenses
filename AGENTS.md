@@ -511,6 +511,7 @@ When processing new monthly CSV files, search for and flag these vendors:
 | Vendor | Search Pattern | Reason | First Seen |
 |--------|---------------|--------|------------|
 | Mariemur | `MARIEMUR` | Monitor for unexpected new charges | Dec 2025 (378.32 + 7,245.88 MXN expected) |
+| Newshosting | `NEWSHOSTING` | **EXPECTING REFUND of $89.85 USD** (ticket #NH00384322, approved 2026-03-29). Double charge in Feb 2026 — two annual plans at $89.85. Should see a credit on Apr/May statement. After refund confirmed, only expect 1 charge/year. | Feb 2026 |
 | NYC Trip - Hotel | See hotel patterns below | Check for extra hotel charges (Dec 27 - Jan 1 trip) | Dec 2025 (64,428.62 MXN / 3,449.62 USD booked via Travelocity) |
 | NYC Trip - In-trip expenses | See hotel + location patterns | **January CSV will have actual trip expenses** (Uber, meals, etc.) | Trip: Dec 27, 2025 - Jan 1, 2026 |
 
